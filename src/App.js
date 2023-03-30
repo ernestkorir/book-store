@@ -8,10 +8,10 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <>
-    <Navbar />
-    <Routes>
-       <Route path="/" element={<Books title="React in Action" author="Mark Tielens" />} />
-       <Route path="/categories" element={<Categories />} />
+      <Navbar />
+      <Routes>
+      <Route path="/" element={<Books title="React in Action" author="Mark Tielens" />} />
+      <Route path="/categories" element={<Categories />} />
     </Routes>
     </>
   );
