@@ -12,16 +12,21 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "extends": ["react-app","airbnb", "plugin:react/recommended", "plugin:react-hooks/recommended"],
+  "extends": [
+    "react-app",
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+
   "plugins": ["react"],
   "rules": {
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "react/react-in-jsx-scope": "off",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
     "import/no-unresolved": "off",
-    "no-shadow": "off"
+    "no-shadow": "off",
+    "react/prop-types": "off"
   },
-  "ignorePatterns": [
-    "dist/",
-    "build/"
-  ]
+  "ignorePatterns": ["dist/", "build/"]
 }
