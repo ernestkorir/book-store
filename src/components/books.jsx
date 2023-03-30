@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Form from './Form';
 
 const Books = ({ title, author }) => (
