@@ -1,0 +1,32 @@
+.verticalLine {
+  border-right: thick solid #030000;
+}
+
+nav ul {
+  display: flex;
+  align-self: flex-start;
+  gap: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+.flexRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  width: 20%;
+}
+
+button {
+  align-self: flex-end;
+}
