@@ -73,7 +73,7 @@ Create a bookstore
 
 - Display a list of books
 - Add a book
-- REmove a selected Book
+- Remove a selected Book
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
