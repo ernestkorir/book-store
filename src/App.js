@@ -10,9 +10,9 @@ function App() {
     <>
       <Navbar />
       <Routes>
-      <Route path="/" element={<Books title="React in Action" author="Mark Tielens" />} />
-      <Route path="/categories" element={<Categories />} />
-    </Routes>
+        <Route path="/" element={<Books title="React in Action" author="Mark Tielens" />} />
+        <Route path="/categories" element={<Categories />} />
+      </Routes>
     </>
   );
 }
