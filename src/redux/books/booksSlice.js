@@ -29,11 +29,11 @@ export const bookSlice = createSlice({
   initialState,
   reducers: {
     Addbook: (state, action) => {
-      state.book.push(action.payload);
+      state.books.push(action.payload);
     },
     Removebook: (state, action) => {
       const NewState = { ...state };
-      NewState.books = state.books.filter((item) => item.id !== action.payload);
+      NewState.books = state.books.filter((item) => item.item_id !== action.payload);
       return NewState;
     },
   },
