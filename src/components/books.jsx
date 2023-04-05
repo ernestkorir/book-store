@@ -1,24 +1,19 @@
-/* eslint-disable react/prop-types */
-import Form from './Form';
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { Removebook } from '../redux/books/booksSlice';
 
-const Books = ({ title, author }) => (
-  <div>
-    <ul>
-      <div className="book flexRow">
-        {' '}
-        <li>
-          author:
-          {author}
-          {' '}
-          title:
-          {title}
-        </li>
-        <button type="submit" className="remove">remove</button>
+const Book = ({ title, author, id }) => {
+  const dispatch = useDispatch();
+  return (
+    <div className="book flexRow">
+      <h2>{author}</h2>
+      {' '}
+      <p>{title}</p>
+      <div className="actions">
+        <button type="button" onClick={() => dispatch(Removebook(id))}>remove</button>
       </div>
-    </ul>
-    <Form />
-  </div>
+    </div>
+  );
+};
 
-);
-
-export default Books;
+export default Book;
