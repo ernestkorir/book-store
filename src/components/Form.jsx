@@ -1,12 +1,18 @@
+/* eslint import/no-extraneous-dependencies: ["error", {"peerDependencies": true}] */
+
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Addbook } from '../redux/books/booksSlice';
+import { v4 as uuidv4 } from 'uuid';
+import { addbook } from '../redux/books/booksSlice';
 
 const initials = {
   title: '',
   author: '',
   category: '',
 };
+
+const categories = ['Action', 'Non-Fiction', 'Fiction', 'Love', 'Mystery', 'Science Fiction'];
+const getRandomNumber = () => Math.floor(Math.random() * 5) + 1;
 
 const Form = () => {
   const [state, setState] = useState(initials);
@@ -15,11 +21,13 @@ const Form = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setState((prev) => ({ ...prev, [name]: value, item_id: `item${Array.length + 1}` }));
+    setState((prev) => ({
+      ...prev, [name]: value, item_id: `item${Array.length + 1}`, category: categories[getRandomNumber()],
+    }));
   };
 
   const handleSubmit = () => {
-    dispatch(Addbook(state));
+    dispatch(addbook({ ...state, item_id: uuidv4() }));
     setState(initials);
   };
 
