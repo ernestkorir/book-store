@@ -32,11 +32,15 @@ const Form = () => {
   };
 
   return (
-    <div>
-      <form className="Form flexColumn" method="post">
-        <input type="text" value={state.author} id="author" name="author" placeholder="Author" onChange={handleChange} required />
-        <input type="text" value={state.title} id="title" name="title" placeholder="Book Title" onChange={handleChange} required />
-        <button type="button" onClick={handleSubmit}>Add a Book</button>
+    <div className="mainform">
+      <div className="Line" />
+      <div className="Title">
+        ADD NEW BOOK
+      </div>
+      <form className="Form" method="post">
+        <input type="text" value={state.author} id="author" className="form_item" name="author" placeholder="Author" onChange={handleChange} required />
+        <input type="text" value={state.title} id="title" className="form_item" name="title" placeholder="Book Title" onChange={handleChange} required />
+        <button type="button" onClick={handleSubmit} className="form_button">Add a Book</button>
       </form>
     </div>
   );
